@@ -1,0 +1,349 @@
+<?php $id = $_GET['Id_Game']; ?>
+
+<main id="view-game" class="kh-<?= $id ?>">
+    <div id="notice" class="notice">
+        <?php if ($flashBag->hasMessages()) {
+            $allFlashBag = $flashBag->fetchMessages();
+            foreach ($allFlashBag as $unFlashBag) { ?>
+                <p><?= $unFlashBag; ?></p>
+            <?php }
+        } ?>
+    </div>
+    <?php foreach ($khGame as $one) {
+        if ($_GET['Id_Game'] == $one['Id_Games']) {
+            if ($one['Id_Games'] == "1") { ?>
+                <div>
+                    <div>
+                        <img class="khImage" src="<?= $wwwUrl . $one['Image']; ?>">
+                        <span class="title"><?= $one["KeybladeName"]; ?></span>
+                        <button class="modalBtn">En savoir plus</button>
+                        <input type="hidden" value="<?= $one['Id_Games']; ?>">
+                    </div>
+                    <div class="modal myModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <table class="firstTable">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" rowspan="3"><img class="khImageTable" src="<?= $wwwUrl . $one['Image']; ?>"></td>
+                                    <td colspan="2" class="title"><?= $one['KeybladeName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><small><i><?= $one['Description']; ?></i></small></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <table width="100%" heigth="100%" class="sndTable">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Strength</td>
+                                                <td class="bg-title-table">MP</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['Strength']; ?></td>
+                                                <td><?= $one['MP']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Crit Rate</td>
+                                                <td class="bg-title-table">Crit Bonus</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['CritRate']; ?></td>
+                                                <td><?= $one['CritBonus']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Recoil</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><?= $one['Recoil'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Obtain</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><?= $one['Obtain'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            <?php } else if ($one['Id_Games'] == "2") { ?>
+                <div>
+                    <div>
+                        <img class="khImage" src="<?= $wwwUrl . $one['Image']; ?>">
+                        <span class="title"><?= $one["KeybladeName"]; ?></span>
+                        <button class="modalBtn">En savoir plus</button>
+                        <input type="hidden" value="<?= $one['Id_Games']; ?>">
+                    </div>
+                    <div class="modal myModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <table class="firstTable">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" rowspan="3"><img class="khImageTable" src="<?= $wwwUrl . $one['Image']; ?>"></td>
+                                    <td colspan="2" class="title"><?= $one['KeybladeName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><small><i><?= $one['Description']; ?></i></small></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <table width="100%" heigth="100%" class="sndTable">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Strength</td>
+                                                <td class="bg-title-table">Magic</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['Strength']; ?></td>
+                                                <td><?= $one['Magic']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Key Length</td>
+                                                <td class="bg-title-table">Ability</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['KeyLength']; ?></td>
+                                                <td><?= $one['Ability']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Obtain</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><?= $one['Obtain'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } else if ($one['Id_Games'] == "3") { ?>
+                <div>
+                    <div>
+                        <img class="khImage" src="<?= $wwwUrl . $one['Image']; ?>">
+                        <span class="title"><?= $one["KeybladeName"]; ?></span>
+                        <button class="modalBtn">En savoir plus</button>
+                        <input type="hidden" value="<?= $one['Id_Games']; ?>">
+                    </div>
+                    <div class="modal myModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <table class="firstTable">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" rowspan="3"><img class="khImageTable" src="<?= $wwwUrl . $one['Image']; ?>"></td>
+                                    <td colspan="3" class="title"><?= $one['KeybladeName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><small><i><?= $one['Description']; ?></i></small></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table width="100%" heigth="100%" class="sndTable">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="3" class="bg-title-table">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Strength</td>
+                                                <td class="bg-title-table">Magic</td>
+                                                <td class="bg-title-table">Length</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['Strength']; ?></td>
+                                                <td><?= $one['Magic']; ?></td>
+                                                <td><?= $one['KeyLength']?></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" class="bg-title-table">Rates</td>
+                                                <td class="bg-title-table">Critical</td>
+                                                <td class="bg-title-table">Shift</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['CritRate']; ?></td>
+                                                <td><?= $one['ShiftRate']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="bg-title-table">Obtain</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"><?= $one['Obtain'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            <?php } else if ($one['Id_Games'] == "4") { ?>
+                <div>
+                    <div>
+                        <img class="khImage" src="<?= $wwwUrl . $one['Image']; ?>">
+                        <span class="title"><?= $one["KeybladeName"]; ?></span>
+                        <button class="modalBtn">En savoir plus</button>
+                        <input type="hidden" value="<?= $one['Id_Games']; ?>">
+                    </div>
+                    <div class="modal myModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <table class="firstTable">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" rowspan="3"><img class="khImageTable" src="<?= $wwwUrl . $one['Image']; ?>"></td>
+                                    <td colspan="3" class="title"><?= $one['KeybladeName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><small><i><?= $one['Description']; ?></i></small></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table width="100%" heigth="100%" class="sndTable">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="3" class="bg-title-table">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="bg-title-table">Wielded by</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"><?= $one['HeroWielder']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Strength</td>
+                                                <td class="bg-title-table">Magic</td>
+                                                <td class="bg-title-table">Length</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['Strength']; ?></td>
+                                                <td><?= $one['Magic']; ?></td>
+                                                <td><?= $one['KeyLength']?></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" class="bg-title-table">Critical</td>
+                                                <td class="bg-title-table">Rate</td>
+                                                <td class="bg-title-table">Damage</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['CritRate']; ?></td>
+                                                <td><?= $one['CritDamage']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="bg-title-table">Obtain</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"><?= $one['Obtain'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } else if ($one['Id_Games'] == "5") { ?>
+                <div>
+                    <div>
+                        <img src="<?= $wwwUrl . $one['Image']; ?>">
+                        <span class="title"><?= $one["KeybladeName"]; ?></span>
+                        <button class="modalBtn">En savoir plus</button>
+                        <input type="hidden" value="<?= $one['Id_Games']; ?>">
+                    </div>
+                    <div class="modal myModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <table class="firstTable">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" rowspan="3"><img class="khImageTable" src="<?= $wwwUrl . $one['Image']; ?>"></td>
+                                    <td colspan="2" class="title"><?= $one['KeybladeName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><small><i><?= $one['Description']; ?></i></small></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <table width="100%" heigth="100%" class="sndTable">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Strike</td>
+                                                <td class="bg-title-table">Thrust</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['Strike']; ?></td>
+                                                <td><?= $one['Thrust']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Combo Finish</td>
+                                                <td class="bg-title-table">Swing Speed</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['ComboFinish']; ?></td>
+                                                <td><?= $one['SwingSpeed']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-title-table">Break Recovery</td>
+                                                <td class="bg-title-table">CP</td>
+                                            </tr>
+                                            <tr>
+                                                <td><?= $one['BreakRecovery']; ?></td>
+                                                <td><?= $one['CP']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Element</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><?= $one['Element']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="bg-title-table">Obtain</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><?= $one['Obtain'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <?php }
+        }
+    } ?>
+</main>

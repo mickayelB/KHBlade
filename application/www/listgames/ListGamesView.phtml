@@ -1,0 +1,20 @@
+<main class="game-list">
+    <div id="notice" class="notice">
+        <?php if($flashBag->hasMessages()){
+            $allFlashBag = $flashBag->fetchMessages();
+            foreach ($allFlashBag as $unFlashBag) { ?>
+                <p><?= $unFlashBag; ?></p>
+            <?php }
+        } ?>
+    </div>
+    <?php foreach ($listGames as $one) { ?>
+        <div class="games">
+            <a id="game-link" href="<?= $requestUrl; ?>/oneGame?Id_Game=<?= $one['Id']; ?>">
+                <img class="logo" src="<?= $wwwUrl . $one['Image']; ?>">
+                <p id="title-logo"><?= $one['Name']; ?></p>
+                <input id="hidden-champ" type="hidden" value="<?= $one['Game'] ;?>">
+            </a>
+        </div>
+    <?php } ?>
+</main>
+

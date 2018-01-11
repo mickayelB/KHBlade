@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KHBlade</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+</head>
+<body>
+
+<!-- En-tête commune -->
+<header>
+    <div id="title-header">
+        <h1 class="main-title">Kingdom Hearts /</h1>
+        <nav>
+            <ul>
+                <li><a href="<?= $requestUrl ?>">Home</a></li>
+                <li><a href="<?= $requestUrl ?>/listgames">Games List</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Interface utilisateur -->
+
+
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template']; ?>
+
+<!-- Pied de page commun -->
+<footer>
+</footer>
+
+
+<!-- Librairie jQuery -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

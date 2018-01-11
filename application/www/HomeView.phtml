@@ -1,0 +1,15 @@
+<main class="homepage">
+    <div id="notice" class="notice">
+        <?php if($flashBag->hasMessages()){
+            $allFlashBag = $flashBag->fetchMessages();
+            foreach ($allFlashBag as $unFlashBag) { ?>
+                <p><?= $unFlashBag; ?></p>
+            <?php }
+        } ?>
+    </div>
+    <div id="home">
+        <p>Welcome!</p>
+        <p>Here, you'll find every weapon called "KeyBlade" for each game.</p>
+        <p>Just check it out!</p>
+    </div>
+</main>
